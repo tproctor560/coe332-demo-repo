@@ -6,14 +6,19 @@ def compute_average_mass(a_list_of_dicts, a_key_string):
         total_mass += float(a_list_of_dicts[i][a_key_string])
     return (total_mass / len(a_list_of_dicts))
 
+
 def class_number(type, number):
     count_type = {}
+   #i used chatgpt to generate the rest of the function because i was struggling to count using a format similar to the structure above, running into many string and float errors
     for item in type:
         if number in item:
             value = item[number]
             if value:
                 count_type[value] = count_type.get(value, 0) + 1
-    return(count_type)
+
+    return count_type
+
+
 
 def check_hemisphere(latitude: float, longitude: float) -> str: #type hints
     location = ''
